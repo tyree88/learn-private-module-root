@@ -42,8 +42,8 @@ module "s3-webapp" {
 # }
 
 resource "aws_instance" "web" {
-  # ami           = data.aws_ami.ubuntu.id
-  ami = "ami-029c64b3c205e6cce"
+  ami           = data.aws_ami.ubuntu.id
+  
   instance_type = "t2.micro"
 
   tags = {
