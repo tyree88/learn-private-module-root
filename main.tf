@@ -23,6 +23,7 @@ module "s3-webapp" {
   region = var.region
   prefix = var.prefix
   version = "1.0.0"
+
 }
 
 data "aws_ami" "ubuntu" {
@@ -45,5 +46,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   
   instance_type = "t2.micro"
-
+  tags = {
+    "key" = "value"
+  }
 }
