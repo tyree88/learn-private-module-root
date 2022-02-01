@@ -4,8 +4,7 @@ terraform {
       source = "hashicorp/aws"
     }
   }
-  backend "remote" {
-    hostname = "app.terraform.io"
+  cloud {
     organization = "tyreepearson"
     workspaces {
       name="learn-private-module-root"
