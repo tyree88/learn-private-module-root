@@ -4,7 +4,7 @@ terraform {
       source = "hashicorp/aws"
     }
   }
-  
+
 }
 
 provider "aws" {
@@ -13,16 +13,15 @@ provider "aws" {
 
 module "module" {
   source  = "app.terraform.io/tyreepearson/module/aws"
-  name   = var.name
-  region = var.region
-  prefix = var.prefix
+  name    = var.name
+  region  = var.region
+  prefix  = var.prefix
   version = "1.0.0"
 }
 module "s3-webapp" {
   source  = "app.terraform.io/tyreepearson/s3-webapp/aws"
-  name   = var.name
-  region = var.region
-  prefix = var.prefix
-  version = "1.0.0"
-  # insert required variables here
+  name    = var.name
+  region  = var.region
+  prefix  = var.prefix
+  version = "1.1.2"
 }
